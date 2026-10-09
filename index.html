@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bot test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 32px;
+    background: #F3C861;
+    background:
+      radial-gradient(145% 145% at 8% 4%,
+        #F9D98A 0%,
+        #F3C861 20%,
+        #E8B5C9 52%,
+        #B18EFE 80%,
+        #5A2BCC 100%);
+    background-attachment: fixed;
+    color: #1A1614;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 640px; }
+  .lamp {
+    width: 26px;
+    height: auto;
+    display: block;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(34px, 6vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -.012em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  p {
+    font-weight: 300;
+    font-size: clamp(17px, 2.2vw, 20px);
+    line-height: 1.55;
+    margin: 18px 0 0;
+    max-width: 30em;
+    color: #2E2724;
+  }
+  .nudge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: #2E2724;
+  }
+  .nudge svg { display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .nudge svg { animation: drift 2.4s ease-in-out infinite; }
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0); }
+      50%      { transform: translate(3px, 3px); }
+    }
+  }
+  footer {
+    position: absolute;
+    left: 32px;
+    bottom: 26px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #1A1614;
+    opacity: .5;
+  }
+  @media (max-width: 600px) {
+    body { padding: 40px 22px 76px; }
+    footer { left: 22px; bottom: 20px; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img class="lamp" src="lamp.png" alt="Geordie">
+    <h1>Test the bot</h1>
+    <p>It lives in the bottom-right corner of your screen. Open it and ask it anything you think a prospect, an analyst or an awkward customer would ask.</p>
+    <span class="nudge">
+      Down there
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+        <path d="M3 3 L12 12 M12 12 V5 M12 12 H5" stroke="#2E2724" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </main>
+  <footer>Internal test page — not a Geordie property</footer>
+
+  <!-- Intercom / Fin messenger, anonymous visitor mode -->
+  <script>
+    window.intercomSettings = {
+      api_base: "https://api-iam.intercom.io",
+      app_id: "t0dh0ve8"
+    };
+  </script>
+  <script>
+    (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/t0dh0ve8';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+  </script>
+</body>
+</html>
